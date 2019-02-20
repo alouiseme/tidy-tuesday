@@ -1,7 +1,3 @@
-file_url <- c("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-02-19/phd_by_field.csv")
-
-data <- read.csv(file_url)
-
 #pipe to filter and clean for each broad field comparison
 data %>%
   filter(year >= 2010 ) %>%
