@@ -1,7 +1,11 @@
+source('/cloud/project/library.R')
+
+data <- read.csv('/cloud/project/02202019/data.csv')
+
 #pipe to filter and clean for each broad field comparison
 data %>%
-  filter(year >= 2010 ) %>%
-  filter(broad_field == "Education") %>%
+  dplyr::filter(year >= 2010 ) %>%
+  dplyr::filter(broad_field == "Education") %>%
 
     #baseplot
    ggplot( aes(x = year, y = n_phds, col = major_field)) +

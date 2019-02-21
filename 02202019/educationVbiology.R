@@ -1,3 +1,7 @@
+source('/cloud/project/library.R')
+
+data <- read.csv('/cloud/project/02202019/data.csv')
+
 #pipe to filter and clean for each broad field comparison
 data %>%
   filter(year >= 2010 ) %>%
